@@ -10,6 +10,7 @@ public class Main : MonoBehaviour
     public GameObject[] prefabEnemies;
     public float enemySpawnPerSecond = 0.5f;
     public float enemyInsetDefault = 1.5f;
+    public float gameRestartDelay = 2;
     private BoundsCheck bndCheck;
 
     private void Awake()
@@ -40,6 +41,20 @@ public class Main : MonoBehaviour
         Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
 
     }
+
+    void DelayedRestart()
+    {
+        Invoke(nameof(Restart), gameRestartDelay);
+    }
+    void Restart()
+    {
+        SceneManager.LoadScene("_Scene_1");
+    }
+    static public void HERO_DIED()
+    {
+        S.DelayedRestart();
+    }
+
 
     // Start is called before the first frame update
     void Start()

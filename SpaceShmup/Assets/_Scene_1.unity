@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0797a7f0fb05686479ae8e71a2c23849, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -441,6 +441,7 @@ MonoBehaviour:
   - {fileID: 6061845656130162464, guid: fbf4295564cf921449b27a5d8caa4f6b, type: 3}
   enemySpawnPerSecond: 0.5
   enemyInsetDefault: 1.5
+  gameRestartDelay: 2
 --- !u!1 &1116392957
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +492,9 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pitchMult: 30
-  shieldLevel: 1
+  projectilePrefab: {fileID: 1803147419225729897, guid: efdb8ab2d9253b7498bdaed6a9f17817, type: 3}
+  projectileSpeed: 40
+  _shieldLevel: 1
 --- !u!4 &1116392960
 Transform:
   m_ObjectHideFlags: 0
